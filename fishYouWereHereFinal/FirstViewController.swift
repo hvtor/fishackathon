@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class FirstViewController: UIViewController, UITabBarControllerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet var imageView: UIImageView!
     
     var imagePicker: UIImagePickerController!

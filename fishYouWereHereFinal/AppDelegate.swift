@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // CornFlowerBlue #4A86E8
+        
+        Parse.setApplicationId("Zu4RuY4kMPskK123556i6qomgHuZtoqc9ikZOoyg",
+            clientKey: "8qNMkw8vj6Vg61ytYizyHebHOAxSOEpRijW2MnwD")
+
         return true
     }
 
