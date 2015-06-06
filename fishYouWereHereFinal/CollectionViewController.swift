@@ -12,10 +12,10 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
     private let reuseIdentifier = "Cell"
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
-    
-    
+    var fishCollection = [Dictionary<String,String>]()
 
-    @IBOutlet var imageView: UIImageView!
+//    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var label: UILabel!
     
     
     override func viewDidLoad() {
@@ -28,15 +28,24 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return self.fishCollection.count
     }
 
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
         
+        let fishPlistData = fishCollection[ indexPath.row ]
+        
+        println( "fishPlistData \(fishPlistData)")
+
+        
         return cell
+        
     }
+    
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
@@ -52,53 +61,79 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     func loadPListData(){
         
-        // MARK: == fishackathon2015.plist Keys ==
-        let SpeciesNameKey = "SpeciesName"
-        let CommonNameKey = "CommonName"
-        let ImageURLKey = "ImageURL"
+        var plistArray:NSArray?
         
-        var speciesName: AnyObject
-        var commonName: AnyObject
-        var imageURL: AnyObject
+        if let path = NSBundle.mainBundle().pathForResource("fishackathon2015", ofType: "plist") {
+            plistArray = NSArray(contentsOfFile: path)!
+        }
         
-        // getting path to fishackathon2015.plist
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
-        let documentsDirectory = paths[0] as! String
-        let path = documentsDirectory.stringByAppendingPathComponent("fishYouWereHereFinal/fishackathon2015.plist")
-        let fileManager = NSFileManager.defaultManager()
-        //check if file exists
-        if(!fileManager.fileExistsAtPath(path)) {
-            // If it doesn't, copy it from the default file in the Bundle
-            if let bundlePath = NSBundle.mainBundle().pathForResource("fishackathon2015", ofType: "plist") {
-                var resultArray = NSArray(contentsOfFile: bundlePath)
-//                var speciesName = resultArray.["SpeciesName"]
-//                    resultArray.["CommonName"]
-//                resultArray.["ImageURL"]
-                println("Bundle fishackathon2015.plist file is --> \(resultArray?.description)")
-                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
-                println("copy")
-            } else {
-                println("fishackathon2015.plist not found. Please, make sure it is part of the bundle.")
+        println( plistArray )
+        
+        if let array = plistArray {
+            
+            for fish in array{
+                let fishData = fish as? NSDictionary
+                self.fishCollection.append( fishData! as! Dictionary<String, String> )
+                println( fishData )
             }
-        } else {
-            println("fishackathon2015.plist already exits at path.")
-            // use this to delete file from documents directory
-            //fileManager.removeItemAtPath(path, error: nil)
         }
-        let resultArray = NSMutableArray(contentsOfFile: path)
-        println("Loaded fishackathon2015.plist file is --> \(resultArray)")
-        var myDict: = resultArray?[0]
-        if let dict = myDict {
-            //loading values
-            speciesName = dict.objectForKey(SpeciesNameKey)!
-            commonName = dict.objectForKey(CommonNameKey)!
-            imageURL = dict.objectForKey(ImageURLKey)!
-        } else {
-            println("WARNING: Couldn't create dictionary from fishackathon2015.plist! Default values will be used!")
-        }
-
+        
+        
     }
+    
+//    func loadPListDataold(){
+//        
+//        // MARK: == fishackathon2015.plist Keys ==
+//        let SpeciesNameKey = "SpeciesName"
+//        let CommonNameKey = "CommonName"
+//        let ImageURLKey = "ImageURL"
+//        
+//        var speciesName: AnyObject
+//        var commonName: AnyObject
+//        var imageURL: AnyObject
+//        
+//        // getting path to fishackathon2015.plist
+//        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+//        let documentsDirectory = paths[0] as! String
+//        let path = documentsDirectory.stringByAppendingPathComponent("fishYouWereHereFinal/fishackathon2015.plist")
+//        let fileManager = NSFileManager.defaultManager()
+//        //check if file exists
+//        if(!fileManager.fileExistsAtPath(path)) {
+//            // If it doesn't, copy it from the default file in the Bundle
+//            if let bundlePath = NSBundle.mainBundle().pathForResource("fishackathon2015", ofType: "plist") {
+//                var resultArray = NSArray(contentsOfFile: bundlePath)
+//                //                var speciesName = resultArray.["SpeciesName"]
+//                //                    resultArray.["CommonName"]
+//                //                resultArray.["ImageURL"]
+//                println("Bundle fishackathon2015.plist file is --> \(resultArray?.description)")
+//                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
+//                println("copy")
+//            } else {
+//                println("fishackathon2015.plist not found. Please, make sure it is part of the bundle.")
+//            }
+//        } else {
+//            println("fishackathon2015.plist already exits at path.")
+//            // use this to delete file from documents directory
+//            //fileManager.removeItemAtPath(path, error: nil)
+//        }
+//        let resultArray = NSMutableArray(contentsOfFile: path)
+//        println("Loaded fishackathon2015.plist file is --> \(resultArray)")
+//        var myDict: = resultArray?[0]
+//        if let dict = myDict {
+//            //loading values
+//            speciesName = dict.objectForKey(SpeciesNameKey)!
+//            commonName = dict.objectForKey(CommonNameKey)!
+//            imageURL = dict.objectForKey(ImageURLKey)!
+//        } else {
+//            println("WARNING: Couldn't create dictionary from fishackathon2015.plist! Default values will be used!")
+//        }
+//        
+//    }
+    
 
 
 }
+
+
+
 
