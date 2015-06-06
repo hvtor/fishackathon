@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>A60D9F3B-F59E-4C93-AD45-8AE621C12477</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>fishYouWereHereFinal</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A05B01F887D5F0B4AC4E188E80A7C1A93D7A3710</key>
 		<string>https://github.com/hvtor/fishackathon.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>fishYouWereHereFinal.xcodeproj/project.xcworkspace</string>
+	<string>fishYouWereHereFinal.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A05B01F887D5F0B4AC4E188E80A7C1A93D7A3710</key>
