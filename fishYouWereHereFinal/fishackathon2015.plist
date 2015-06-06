@@ -6,7 +6,7 @@
 			<key>SpeciesName</key>
 			<string>Aprion virescens</string>
 			<key>CommonName</key>
-			<string>Aprion virescens</string>
+			<string>Green jobfish </string>
 			<key>ImageURL</key>
 			<string>http://fishbase.org/images/thumbnails/jpg/tn_Apvir_u5.jpg</string>
 		</dict>
@@ -14,7 +14,7 @@
 			<key>SpeciesName</key>
 			<string>Brotula multibarbata</string>
 			<key>CommonName</key>
-			<string>Brotula multibarbata</string>
+			<string>Goatsbeard brotula </string>
 			<key>ImageURL</key>
 			<string>http://fishbase.org/images/thumbnails/jpg/tn_Brmul_u6.jpg</string>
 		</dict>
@@ -22,7 +22,7 @@
 			<key>SpeciesName</key>
 			<string>Elagatis bipinnulata</string>
 			<key>CommonName</key>
-			<string>Elagatis bipinnulata</string>
+			<string>Rainbow runner </string>
 			<key>ImageURL</key>
 			<string>http://fishbase.org/images/thumbnails/jpg/tn_Elbip_u7.jpg</string>
 		</dict>
@@ -30,7 +30,7 @@
 			<key>SpeciesName</key>
 			<string>Eleotris sandwicensis</string>
 			<key>CommonName</key>
-			<string>Eleotris sandwicensis</string>
+			<string>Sandwich Island sleeper </string>
 			<key>ImageURL</key>
 			<string>http://fishbase.org/images/thumbnails/jpg/tn_Elsan_u1.jpg</string>
 		</dict>
@@ -38,7 +38,7 @@
 			<key>SpeciesName</key>
 			<string>Etelis carbunculus</string>
 			<key>CommonName</key>
-			<string>Etelis carbunculus</string>
+			<string>Deep-water red snapper </string>
 			<key>ImageURL</key>
 			<string>http://fishbase.org/images/thumbnails/jpg/tn_Etcar_u5.jpg</string>
 		</dict>
@@ -46,7 +46,7 @@
 			<key>SpeciesName</key>
 			<string>Etelis coruscans</string>
 			<key>CommonName</key>
-			<string>Etelis coruscans</string>
+			<string>Deepwater longtail red snapper </string>
 			<key>ImageURL</key>
 			<string>http://fishbase.org/images/thumbnails/jpg/tn_Etcor_u0.jpg</string>
 		</dict>
@@ -54,7 +54,7 @@
 			<key>SpeciesName</key>
 			<string>Lampris guttatus</string>
 			<key>CommonName</key>
-			<string>Lampris guttatus</string>
+			<string>Opah </string>
 			<key>ImageURL</key>
 			<string>http://fishbase.org/images/thumbnails/jpg/tn_Lagut_ua.jpg</string>
 		</dict>
@@ -62,9 +62,9 @@
 			<key>SpeciesName</key>
 			<string>Polydactylus sexfilis</string>
 			<key>CommonName</key>
-			<string>Polydactylus sexfilis</string>
+			<string>Sixfinger threadfin </string>
 			<key>ImageURL</key>
-			<string>http://fishbase.org/images/thumbnails/jpg/tn_Posex_u5.jpg</string>
+			<string>http://fishbase.org/images/thumbnails/jpg/tn_Posex_ua.jpg</string>
 		</dict>
 	</array>
 </plist>
