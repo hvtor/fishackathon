@@ -140,7 +140,6 @@
 			children = (
 				63DAD7251B227F2F00EDC230 /* firstViewControllerScreenShot.png */,
 				63DAD7261B227F2F00EDC230 /* fish2.png */,
-				E930BDA91B22D44D009B9EE0 /* fishackathon2015.plist */,
 				E930BDAD1B22E289009B9EE0 /* Swift.png */,
 				63DAD7031B2278A700EDC230 /* AppDelegate.swift */,
 				63DAD7291B227F8000EDC230 /* GotoMainController.swift */,
@@ -159,6 +158,7 @@
 		63DAD7011B2278A700EDC230 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E930BDA91B22D44D009B9EE0 /* fishackathon2015.plist */,
 				63DAD7021B2278A700EDC230 /* Info.plist */,
 			);
 			name = "Supporting Files";

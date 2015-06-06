@@ -50,7 +50,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         // Dispose of any resources that can be recreated.
     }
     
-    func loadPListData() {
+    func loadPListData(){
         
         // MARK: == fishackathon2015.plist Keys ==
         let SpeciesNameKey = "SpeciesName"
@@ -69,9 +69,12 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         //check if file exists
         if(!fileManager.fileExistsAtPath(path)) {
             // If it doesn't, copy it from the default file in the Bundle
-            if let bundlePath = NSBundle.mainBundle().pathForResource("fishYouWereHereFinal/fishackathon2015", ofType: "plist") {
-                let resultDictionary = NSMutableDictionary(contentsOfFile: bundlePath)
-                println("Bundle fishackathon2015.plist file is --> \(resultDictionary?.description)")
+            if let bundlePath = NSBundle.mainBundle().pathForResource("fishackathon2015", ofType: "plist") {
+                var resultArray = NSArray(contentsOfFile: bundlePath)
+//                var speciesName = resultArray.["SpeciesName"]
+//                    resultArray.["CommonName"]
+//                resultArray.["ImageURL"]
+                println("Bundle fishackathon2015.plist file is --> \(resultArray?.description)")
                 fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
                 println("copy")
             } else {
@@ -82,19 +85,18 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             // use this to delete file from documents directory
             //fileManager.removeItemAtPath(path, error: nil)
         }
-        let resultDictionary = NSMutableDictionary(contentsOfFile: path)
-        println("Loaded fishackathon2015.plist file is --> \(resultDictionary?.description)")
-        var myDict = NSDictionary(contentsOfFile: path)
+        let resultArray = NSMutableArray(contentsOfFile: path)
+        println("Loaded fishackathon2015.plist file is --> \(resultArray)")
+        var myDict: = resultArray?[0]
         if let dict = myDict {
             //loading values
             speciesName = dict.objectForKey(SpeciesNameKey)!
             commonName = dict.objectForKey(CommonNameKey)!
             imageURL = dict.objectForKey(ImageURLKey)!
-            
-            //...
         } else {
             println("WARNING: Couldn't create dictionary from fishackathon2015.plist! Default values will be used!")
         }
+
     }
 
 
