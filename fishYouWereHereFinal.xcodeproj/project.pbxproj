@@ -18,6 +18,7 @@
 		63DAD7281B227F2F00EDC230 /* fish2.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DAD7261B227F2F00EDC230 /* fish2.png */; };
 		63DAD72A1B227F8000EDC230 /* GotoMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DAD7291B227F8000EDC230 /* GotoMainController.swift */; };
 		E930BDAA1B22D44D009B9EE0 /* fishackathon2015.plist in Resources */ = {isa = PBXBuildFile; fileRef = E930BDA91B22D44D009B9EE0 /* fishackathon2015.plist */; };
+		E930BDAC1B22DE19009B9EE0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E930BDAB1B22DE19009B9EE0 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		63DAD7261B227F2F00EDC230 /* fish2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish2.png; sourceTree = "<group>"; };
 		63DAD7291B227F8000EDC230 /* GotoMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GotoMainController.swift; sourceTree = "<group>"; };
 		E930BDA91B22D44D009B9EE0 /* fishackathon2015.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fishackathon2015.plist; sourceTree = "<group>"; };
+		E930BDAB1B22DE19009B9EE0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				63DAD7051B2278A700EDC230 /* FirstViewController.swift */,
 				63DAD7071B2278A700EDC230 /* SecondViewController.swift */,
 				63DAD7091B2278A700EDC230 /* Main.storyboard */,
+				E930BDAB1B22DE19009B9EE0 /* CollectionViewCell.swift */,
 				63DAD70C1B2278A700EDC230 /* Images.xcassets */,
 				63DAD70E1B2278A700EDC230 /* LaunchScreen.xib */,
 				63DAD7011B2278A700EDC230 /* Supporting Files */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E930BDAC1B22DE19009B9EE0 /* CollectionViewCell.swift in Sources */,
 				63DAD7081B2278A700EDC230 /* SecondViewController.swift in Sources */,
 				63DAD72A1B227F8000EDC230 /* GotoMainController.swift in Sources */,
 				63DAD7041B2278A700EDC230 /* AppDelegate.swift in Sources */,
