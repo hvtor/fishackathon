@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  MapViewController
 //  fishYouWereHereFinal
 //
 //  Created by Gavin Thompson on 2015-06-05.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UITabBarControllerDelegate, UINavigationControllerDelegate {
+class MapViewController: UIViewController {
     
     
     override func viewDidLoad() {
@@ -16,7 +16,7 @@ class FirstViewController: UIViewController, UITabBarControllerDelegate, UINavig
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-       
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
