@@ -13,10 +13,12 @@ class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavig
     
     var coreLocationManager:CLLocationManager!
     var imagePicker: UIImagePickerController!
+    
 
     var pictureLocationCoords:CLLocationCoordinate2D!
     var pictureLocationLat:Double!
     var pictureLocationLng:Double!
+//    var pictureCurrentWeather
     
     @IBOutlet var imageView: UIImageView!
     
@@ -59,6 +61,10 @@ class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavig
 //        println("locationManager location: \(pictureLocationCoords)")
 //        println("locationManager lat: \(pictureLocationLat)")
 //        println("locationManager lng: \(pictureLocationLng)")
+        
+        let request = HTTPCommunication()
+        request.getWeatherData(43.7, lng:79.4)
+
 
     }
     
