@@ -7,13 +7,34 @@
 //
 
 import UIKit
+import CoreLocation
 
-class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate {
+    
+    var coreLocationManager:CLLocationManager!
+    var imagePicker: UIImagePickerController!
+
+    var pictureLocationCoords:CLLocationCoordinate2D!
+    var pictureLocationLat:Double!
+    var pictureLocationLng:Double!
+    
     @IBOutlet var imageView: UIImageView!
     
-    var imagePicker: UIImagePickerController!
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        println("camera vc loaded")
+        setupLocationManager()
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
     
     @IBAction func takePhoto(sender: UIButton) {
+        println("button clicked")
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .Camera
@@ -21,23 +42,38 @@ class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavig
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        getLocation()
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func getLocation(){
+        
+        pictureLocationCoords = coreLocationManager.location.coordinate
+        pictureLocationLat = coreLocationManager.location.coordinate.latitude
+        pictureLocationLng = coreLocationManager.location.coordinate.longitude
+        
+//        println("locationManager location: \(pictureLocationCoords)")
+//        println("locationManager lat: \(pictureLocationLat)")
+//        println("locationManager lng: \(pictureLocationLng)")
+
     }
     
+    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
+//        println("locations = \(locations)")
+    }
+    
+    func setupLocationManager(){
+        coreLocationManager = CLLocationManager()
+        coreLocationManager.delegate = self
+        coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest
+        coreLocationManager.startUpdatingLocation()
+        coreLocationManager.requestAlwaysAuthorization()
+        coreLocationManager.startUpdatingLocation()
+    }
     
 }
 

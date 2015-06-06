@@ -164,6 +164,7 @@
                                 </state>
                                 <connections>
                                     <action selector="takePhoto:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Tma-En-gKs"/>
+                                    <action selector="takePhoto:" destination="SSW-tZ-RaP" eventType="touchUpInside" id="zrf-Kh-Skk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -171,6 +172,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Camera-50" selectedImage="Camera-50" id="TF5-Zg-b4g"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="JWw-Hb-Y5L" id="OQ3-bY-1P4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFF-FG-iVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
