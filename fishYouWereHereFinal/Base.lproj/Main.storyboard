@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="-92" y="-120"/>
         </scene>
-        <!--Item-->
+        <!--Map View Controller-->
         <scene sceneID="XhH-e5-Yoh">
             <objects>
                 <viewController id="hwf-4b-mK4" customClass="MapViewController" customModule="fishYouWereHereFinal" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,13 +90,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Low-Qg-Hxe"/>
+                    <tabBarItem key="tabBarItem" title="" image="Treasure Map-50" selectedImage="Treasure Map-50" id="Low-Qg-Hxe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuT-zU-1Zk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-92" y="802"/>
         </scene>
-        <!--Item-->
+        <!--Collection View Controller-->
         <scene sceneID="DlI-Vf-A3G">
             <objects>
                 <collectionViewController id="4AH-lT-z6f" customClass="CollectionViewController" customModule="fishYouWereHereFinal" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,13 +136,13 @@
                             <outlet property="delegate" destination="4AH-lT-z6f" id="kxi-6x-dAd"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="BM3-7j-jbL"/>
+                    <tabBarItem key="tabBarItem" title="" image="Insert Table-50" selectedImage="Insert Table-50" id="BM3-7j-jbL"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5V-32-PZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="424" y="361"/>
         </scene>
-        <!--Item-->
+        <!--Camera View Controller-->
         <scene sceneID="Pfa-rU-OwI">
             <objects>
                 <viewController id="SSW-tZ-RaP" customClass="CameraViewController" customModule="fishYouWereHereFinal" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,14 +169,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="TF5-Zg-b4g"/>
+                    <tabBarItem key="tabBarItem" title="" image="Camera-50" selectedImage="Camera-50" id="TF5-Zg-b4g"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFF-FG-iVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="424" y="-961"/>
         </scene>
-        <!--Item-->
+        <!--Results Table View Controller-->
         <scene sceneID="yTV-iS-D06">
             <objects>
                 <viewController id="2Mn-ys-9Nl" customClass="ResultsTableViewController" customModule="fishYouWereHereFinal" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="KxU-aq-bvr"/>
+                    <tabBarItem key="tabBarItem" title="" image="Align Justify-50" selectedImage="Align Justify-50" id="KxU-aq-bvr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4J8-Xm-qCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,6 +198,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Align Justify-50" width="50" height="50"/>
+        <image name="Camera-50" width="50" height="50"/>
+        <image name="Insert Table-50" width="50" height="50"/>
+        <image name="Treasure Map-50" width="50" height="50"/>
         <image name="first" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
