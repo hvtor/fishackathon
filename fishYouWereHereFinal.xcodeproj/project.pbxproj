@@ -14,6 +14,9 @@
 		63DAD70D1B2278A700EDC230 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63DAD70C1B2278A700EDC230 /* Images.xcassets */; };
 		63DAD7101B2278A700EDC230 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DAD70E1B2278A700EDC230 /* LaunchScreen.xib */; };
 		63DAD71C1B2278A800EDC230 /* fishYouWereHereFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DAD71B1B2278A800EDC230 /* fishYouWereHereFinalTests.swift */; };
+		63DAD7271B227F2F00EDC230 /* firstViewControllerScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DAD7251B227F2F00EDC230 /* firstViewControllerScreenShot.png */; };
+		63DAD7281B227F2F00EDC230 /* fish2.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DAD7261B227F2F00EDC230 /* fish2.png */; };
+		63DAD72A1B227F8000EDC230 /* GotoMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DAD7291B227F8000EDC230 /* GotoMainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		63DAD7151B2278A800EDC230 /* fishYouWereHereFinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fishYouWereHereFinalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DAD71A1B2278A800EDC230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63DAD71B1B2278A800EDC230 /* fishYouWereHereFinalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fishYouWereHereFinalTests.swift; sourceTree = "<group>"; };
+		63DAD7251B227F2F00EDC230 /* firstViewControllerScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstViewControllerScreenShot.png; sourceTree = "<group>"; };
+		63DAD7261B227F2F00EDC230 /* fish2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish2.png; sourceTree = "<group>"; };
+		63DAD7291B227F8000EDC230 /* GotoMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GotoMainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +85,10 @@
 		63DAD7001B2278A700EDC230 /* fishYouWereHereFinal */ = {
 			isa = PBXGroup;
 			children = (
+				63DAD7251B227F2F00EDC230 /* firstViewControllerScreenShot.png */,
+				63DAD7261B227F2F00EDC230 /* fish2.png */,
 				63DAD7031B2278A700EDC230 /* AppDelegate.swift */,
+				63DAD7291B227F8000EDC230 /* GotoMainController.swift */,
 				63DAD7051B2278A700EDC230 /* FirstViewController.swift */,
 				63DAD7071B2278A700EDC230 /* SecondViewController.swift */,
 				63DAD7091B2278A700EDC230 /* Main.storyboard */,
@@ -196,8 +205,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63DAD70B1B2278A700EDC230 /* Main.storyboard in Resources */,
+				63DAD7281B227F2F00EDC230 /* fish2.png in Resources */,
 				63DAD7101B2278A700EDC230 /* LaunchScreen.xib in Resources */,
 				63DAD70D1B2278A700EDC230 /* Images.xcassets in Resources */,
+				63DAD7271B227F2F00EDC230 /* firstViewControllerScreenShot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63DAD7081B2278A700EDC230 /* SecondViewController.swift in Sources */,
+				63DAD72A1B227F8000EDC230 /* GotoMainController.swift in Sources */,
 				63DAD7041B2278A700EDC230 /* AppDelegate.swift in Sources */,
 				63DAD7061B2278A700EDC230 /* FirstViewController.swift in Sources */,
 			);
