@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // CornFlowerBlue #4A86E8
         
-        Parse.setApplicationId("Zu4RuY4kMPskK123556i6qomgHuZtoqc9ikZOoyg",
-            clientKey: "8qNMkw8vj6Vg61ytYizyHebHOAxSOEpRijW2MnwD")
+        Parse.setApplicationId("qhqzAA9HSI86mjWDy3HewJKN8bm7dorZEbgc1t3z",
+            clientKey: "2YgLLFqNzfhvZ5JQ86iCF1oQOGcOF9M1b73R4hJq")
 
         return true
     }
