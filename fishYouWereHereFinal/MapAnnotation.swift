@@ -9,11 +9,17 @@
 import Foundation
 import MapKit
 
-class MapAnnotation:NSObject {
+class MapAnnotation:NSObject, MKAnnotation {
     
-    var coordinate = CLLocationCoordinate2D()
+    let coordinate:CLLocationCoordinate2D
+    let title:String
+//    let subtitle:String
     
-    var title:String!
-    var subtitle:String!
+    init(title: String, coordinate: CLLocationCoordinate2D) {
+        self.title = title
+        self.coordinate = coordinate
+        
+        super.init()
+    }
 
 }

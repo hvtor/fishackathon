@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Parse
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
@@ -79,6 +80,37 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.startUpdatingLocation()
     }
+    
+    func getReportsFromParse(){
+        
+        var query:PFQuery = PFQuery(className: "Restaurant")
+        query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
+            if (error != nil) {
+                NSLog("error " + error!.localizedDescription)
+                
+            }else {
+                NSLog("objects %@", objects!)
+                let results = NSArray(array: objects!)
+                
+                // The find succeeded. The first 100 objects are available in objects
+                self.locations = results
+                
+                for location in self.locations {
+
+                    let locationCoord = CLLocationCoordinate2DMake( location["lat"] as! Double, location["lng"] as! Double );
+                    let locationTitle = location["name"] as! String
+                    let fishAnnotation = MapAnnotation(title: locationTitle, coordinate: locationCoord)
+                    
+                    
+                    println("location X annotation: \(fishAnnotation)")
+//                    annotation.subtitle = location["about"];
+                    self.mapView.addAnnotation(fishAnnotation)
+
+                }
+            }
+        })
+        
+    }// end get
     
     
 }

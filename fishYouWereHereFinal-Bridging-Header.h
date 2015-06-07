@@ -7,7 +7,11 @@
 //
 
 #ifndef fishYouWereHereFinal_fishYouWereHereFinal_Bridging_Header_h
+
+
+
 #define fishYouWereHereFinal_fishYouWereHereFinal_Bridging_Header_h
+#import <Parse/Parse.h>
 
 
 #endif
