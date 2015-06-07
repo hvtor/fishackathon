@@ -5,23 +5,27 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A60D9F3B-F59E-4C93-AD45-8AE621C12477</string>
+	<string>8ACAABE4-AA2C-43F1-AFA7-E213377EFCC7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>fishYouWereHereFinal</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>https://github.com/Alamofire/Alamofire.git</string>
 		<key>A05B01F887D5F0B4AC4E188E80A7C1A93D7A3710</key>
-		<string>https://github.com/hvtor/fishackathon.git</string>
+		<string>github.com:hvtor/fishackathon.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>fishYouWereHereFinal.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>../..Alamofire</string>
 		<key>A05B01F887D5F0B4AC4E188E80A7C1A93D7A3710</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/hvtor/fishackathon.git</string>
+	<string>github.com:hvtor/fishackathon.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>A05B01F887D5F0B4AC4E188E80A7C1A93D7A3710</string>
 			<key>IDESourceControlWCCName</key>
-			<string>fishackathon</string>
+			<string>fishYouWereHereFinal</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<key>IDESourceControlWCCName</key>
+			<string>fishYouWereHereFinalAlamofire</string>
 		</dict>
 	</array>
 </dict>

@@ -10,6 +10,7 @@ import UIKit
 
 class FormViewController: UIViewController {
 
+    var sliderSelectedValue:Int!
     @IBOutlet var estimateSlider: UISlider!
     @IBOutlet var estimateValueLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
@@ -65,11 +66,40 @@ class FormViewController: UIViewController {
     
     @IBAction func sliderValueChanged(sender: UISlider) {
         
-        var selectedValue:Int = Int(sender.value*1000);
+        sliderSelectedValue = Int(sender.value*1000);
         
         
-        estimateValueLabel.text = "\(selectedValue)"
+        estimateValueLabel.text = "\(sliderSelectedValue)"
 
+    }
+    
+    @IBAction func submitReport(sender: AnyObject) {
+            sendToParse()
+    }
+    
+    func sendToParse(){
+        var report = PFObject( className: "FishReport" )
+        report.setObject( self.pictureLocationLat, forKey: "lat")
+        report.setObject( self.pictureLocationLng, forKey: "lng")
+        report.setObject( self.sliderSelectedValue, forKey: "schoolSize")
+        report.setObject( self.weatherRequest.currentTemp, forKey: "currentTemp")
+        report.setObject( self.weatherRequest.currentConditions, forKey: "currentConditions")
+        report.setObject( self.weatherRequest.currentWindDegrees, forKey: "windDegrees")
+        report.setObject( self.weatherRequest.currentWindSpeed, forKey: "windSpeed")
+        
+        var imageData:NSData = UIImagePNGRepresentation( capturedImage );
+        report.setObject( PFFile(data: imageData), forKey: "image")
+
+        report.saveInBackgroundWithBlock{
+            (success:Bool, error:NSError?) -> Void in
+            if success {
+                println("Object created with id: \(report.objectId)")
+            } else {
+                println("rerror: \(error)")
+//                self.reactivateTextView()
+//                self.replaceSpinnerWithSubmitButton()
+            }
+        }
     }
 
     
