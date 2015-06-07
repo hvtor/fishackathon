@@ -20,15 +20,17 @@ class FormViewController: UIViewController {
     var pictureLocationLng:Double!
     var capturedImage:UIImage!
 
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        println(weatherRequest)
-        println(pictureLocationCoords)
-        println(pictureLocationLat)
-        println(pictureLocationLng)
-        println(capturedImage)
+//        println(weatherRequest)
+//        println(pictureLocationCoords)
+//        println(pictureLocationLat)
+//        println(pictureLocationLng)
+//        println(capturedImage)
+        
+        
         
         imageView.image = capturedImage!
         // Do any additional setup after loading the view.
