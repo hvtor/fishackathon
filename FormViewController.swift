@@ -63,12 +63,16 @@ class FormViewController: UIViewController {
         estimateSlider.addTarget(self, action: "sliderValueDidChange:", forControlEvents: .ValueChanged)
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     @IBAction func sliderValueChanged(sender: UISlider) {
         
         var selectedValue:Int = Int(sender.value*1000);
+        var stepSize = 100;
         
-        
-        estimateValueLabel.text = "\(selectedValue)"
+        estimateValueLabel.text = "\(selectedValue-selectedValue % stepSize)"
 
     }
 

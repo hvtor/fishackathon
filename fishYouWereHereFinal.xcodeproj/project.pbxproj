@@ -27,6 +27,7 @@
 		63E5FA9C1B23D18700747E81 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E5FA9B1B23D18600747E81 /* MapKit.framework */; };
 		E904334F1B2411CC0088B8A1 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E904334E1B2411CC0088B8A1 /* FormViewController.swift */; };
 		E90433511B2414130088B8A1 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = E90433501B2414130088B8A1 /* fish.png */; };
+		E92CFCD31B24499900E58093 /* fishyou.png in Resources */ = {isa = PBXBuildFile; fileRef = E92CFCD21B24499900E58093 /* fishyou.png */; };
 		E930BDAA1B22D44D009B9EE0 /* fishackathon2015.plist in Resources */ = {isa = PBXBuildFile; fileRef = E930BDA91B22D44D009B9EE0 /* fishackathon2015.plist */; };
 		E930BDAC1B22DE19009B9EE0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E930BDAB1B22DE19009B9EE0 /* CollectionViewCell.swift */; };
 		E930BDAE1B22E289009B9EE0 /* Swift.png in Resources */ = {isa = PBXBuildFile; fileRef = E930BDAD1B22E289009B9EE0 /* Swift.png */; };
@@ -97,6 +98,7 @@
 		E904334E1B2411CC0088B8A1 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormViewController.swift; path = ../FormViewController.swift; sourceTree = "<group>"; };
 		E90433501B2414130088B8A1 /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
 		E92B6BD91B231CA80099B367 /* fishYouWereHereFinal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fishYouWereHereFinal-Bridging-Header.h"; sourceTree = "<group>"; };
+		E92CFCD21B24499900E58093 /* fishyou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fishyou.png; sourceTree = "<group>"; };
 		E930BDA91B22D44D009B9EE0 /* fishackathon2015.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fishackathon2015.plist; sourceTree = "<group>"; };
 		E930BDAB1B22DE19009B9EE0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E930BDAD1B22E289009B9EE0 /* Swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift.png; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				E9C1477A1B243C3C00009C5B /* submitBtn.png */,
 				E90433501B2414130088B8A1 /* fish.png */,
 				63DAD7261B227F2F00EDC230 /* fish2.png */,
+				E92CFCD21B24499900E58093 /* fishyou.png */,
 				E930BDAD1B22E289009B9EE0 /* Swift.png */,
 				63C078DD1B243D3400587AF9 /* Moofushi_Kandu_fish.jpg */,
 				E95420671B23128400F265D4 /* Frameworks */,
@@ -351,6 +354,7 @@
 				E9C1477B1B243C3C00009C5B /* submitBtn.png in Resources */,
 				63DAD7281B227F2F00EDC230 /* fish2.png in Resources */,
 				63DAD7101B2278A700EDC230 /* LaunchScreen.xib in Resources */,
+				E92CFCD31B24499900E58093 /* fishyou.png in Resources */,
 				63DAD70D1B2278A700EDC230 /* Images.xcassets in Resources */,
 				63DAD7271B227F2F00EDC230 /* firstViewControllerScreenShot.png in Resources */,
 				E90433511B2414130088B8A1 /* fish.png in Resources */,
