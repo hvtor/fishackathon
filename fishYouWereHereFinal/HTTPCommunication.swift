@@ -14,6 +14,8 @@ class HTTPCommunication: NSObject, NSURLConnectionDelegate {
     
     var currentTemp:Double!
     var currentConditions:String!
+    var currentWindSpeed:Double!
+    var currentWindDegrees:Double!
     
     func getWeatherData(lat:Double, lng:Double){
         let latString = lat.description
@@ -45,10 +47,13 @@ class HTTPCommunication: NSObject, NSURLConnectionDelegate {
         
         let jsonWeatherArray = jsonResult["weather"] as! NSArray
         let jsonMainResults = jsonResult["main"] as! NSDictionary
+        let jsonWindResults = jsonResult["wind"] as! NSDictionary
         let jsonWeather = jsonWeatherArray[0] as! NSDictionary
         
         self.currentConditions = jsonWeather["description"] as! String
         self.currentTemp = jsonMainResults["temp"] as! Double
+        self.currentWindSpeed = jsonWindResults["speed"] as? Double
+        self.currentWindDegrees = jsonWindResults["deg"] as? Double
 
 
     }
