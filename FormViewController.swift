@@ -10,7 +10,6 @@ import UIKit
 
 class FormViewController: UIViewController {
     
-    var sliderSelectedValue:Int!
     @IBOutlet var estimateSlider: UISlider!
     @IBOutlet var estimateValueLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
@@ -20,16 +19,19 @@ class FormViewController: UIViewController {
     var pictureLocationLat:Double!
     var pictureLocationLng:Double!
     var capturedImage:UIImage!
+
+    var sliderSelectedValue:Int!
+    var schoolSize:Int!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        println(weatherRequest)
-        //        println(pictureLocationCoords)
-        //        println(pictureLocationLat)
-        //        println(pictureLocationLng)
-        //        println(capturedImage)
+//                println(weatherRequest)
+//                println(pictureLocationCoords)
+//                println(pictureLocationLat)
+//                println(pictureLocationLng)
+                println(capturedImage)
         
         
         
@@ -72,9 +74,9 @@ class FormViewController: UIViewController {
         
         var selectedValue:Int = Int(sender.value*1000);
         var stepSize = 100;
-        
-        estimateValueLabel.text = "\(selectedValue-selectedValue % stepSize)"
-        
+        self.schoolSize = selectedValue - (selectedValue % stepSize)
+        estimateValueLabel.text = "\(schoolSize)"
+        println(schoolSize)
     }
     
     @IBAction func submitReport(sender: AnyObject) {
@@ -82,31 +84,32 @@ class FormViewController: UIViewController {
     }
     
     func sendToParse(){
+        println("Sending to Parse")
         var report = PFObject( className: "FishReport" )
         report.setObject( self.pictureLocationLat, forKey: "lat")
         report.setObject( self.pictureLocationLng, forKey: "lng")
-        report.setObject( self.sliderSelectedValue, forKey: "schoolSize")
+        report.setObject( self.schoolSize, forKey: "schoolSize")
         report.setObject( self.weatherRequest.currentTemp, forKey: "currentTemp")
         report.setObject( self.weatherRequest.currentConditions, forKey: "currentConditions")
         report.setObject( self.weatherRequest.currentWindDegrees, forKey: "windDegrees")
         report.setObject( self.weatherRequest.currentWindSpeed, forKey: "windSpeed")
         
-        var imageData:NSData = UIImagePNGRepresentation( capturedImage );
-        report.setObject( PFFile(data: imageData), forKey: "image")
+        println("Sending to Parse 2")
+        var imageData:NSData = UIImageJPEGRepresentation(capturedImage, 0.5)
+        report.setObject(PFFile(data: imageData), forKey: "image")
         
+        println("Sending to Parse 3")
         report.saveInBackgroundWithBlock{
             (success:Bool, error:NSError?) -> Void in
             if success {
                 println("Object created with id: \(report.objectId)")
+                self.performSegueWithIdentifier("showMeMap", sender: self)
             } else {
                 println("rerror: \(error)")
                 //                self.reactivateTextView()
                 //                self.replaceSpinnerWithSubmitButton()
             }
         }
+        println("Sending to Parse SaveInBKGworked")
     }
-    
-    
-    
-    
 }

@@ -46,22 +46,20 @@ class CameraViewController: UIImagePickerController, UITabBarControllerDelegate,
     }
 
     
-    @IBAction func takePhoto(sender: UIButton) {
-//        println("button clicked")
-//
-//        
-//        presentViewController(imagePicker, animated: true, completion: nil)
-    }
+    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         self.capturedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        var imageData:NSData = UIImageJPEGRepresentation(capturedImage, 0.5)
+
         getLocation()
 
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        
         performSegueWithIdentifier("cameraToForm", sender:self )
         
         
-        println("TEST \(info[UIImagePickerControllerOriginalImage] as? UIImage)")
+        println("TEST \(info[UIImagePickerControllerOriginalImage] as! UIImage)")
         
         
     }
