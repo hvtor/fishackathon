@@ -8,51 +8,61 @@
 
 import UIKit
 import CoreLocation
+import MobileCoreServices
 
 
-class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate {
+class CameraViewController: UIImagePickerController, UITabBarControllerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate {
     
     var coreLocationManager:CLLocationManager!
     var imagePicker: UIImagePickerController!
-    
     let request = HTTPCommunication()
-//    var 
     
 
     var pictureLocationCoords:CLLocationCoordinate2D!
     var pictureLocationLat:Double!
     var pictureLocationLng:Double!
-//    var pictureCurrentWeather
     
-    @IBOutlet var imageView: UIImageView!
+    var capturedImage:UIImage!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        println("camera vc loaded")
+        setupLocationManager()
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.mediaTypes = [kUTTypeImage]
+
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        presentViewController(imagePicker, animated: true, completion: nil)
+
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        println("camera vc loaded")
-        setupLocationManager()
-        
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+
     
     @IBAction func takePhoto(sender: UIButton) {
-        println("button clicked")
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
-        
-        presentViewController(imagePicker, animated: true, completion: nil)
+//        println("button clicked")
+//
+//        
+//        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
-        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        
+        self.capturedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         getLocation()
+
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        performSegueWithIdentifier("cameraToForm", sender:self )
+        
+        
+        println("TEST \(info[UIImagePickerControllerOriginalImage] as? UIImage)")
+        
         
     }
     
@@ -71,6 +81,19 @@ class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavig
         //        println("locations = \(locations)")
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "cameraToForm") {
+            
+            var formVC = (segue.destinationViewController as! TestFormViewController)
+            formVC.weatherRequest = self.request
+            formVC.pictureLocationCoords = self.pictureLocationCoords
+            formVC.pictureLocationLat = self.pictureLocationLat
+            formVC.pictureLocationLng = self.pictureLocationLng
+            formVC.capturedImage = self.capturedImage
+        
+        }
+    }
+    
     func setupLocationManager(){
         coreLocationManager = CLLocationManager()
         coreLocationManager.delegate = self
@@ -80,5 +103,6 @@ class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavig
         coreLocationManager.startUpdatingLocation()
     }
     
+
 }
 

@@ -26,9 +26,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
-                    <connections>
-                        <outlet property="imageView" destination="JWw-Hb-Y5L" id="IGi-wI-3ic"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,6 +51,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxN-DV-9wt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-626" y="-120"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="06c-F3-mkO">
+            <objects>
+                <viewController id="2d8-vP-ft3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M1e-Pd-J4Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="RHs-kE-seU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u2Q-AX-bsO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MV4-kh-7Cl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="-782"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -161,32 +176,43 @@
                     <view key="view" contentMode="scaleToFill" id="yg9-O2-K6B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JWw-Hb-Y5L">
-                                <rect key="frame" x="35" y="46" width="250" height="250"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtr-Uk-jWo">
-                                <rect key="frame" x="116" y="418" width="88" height="30"/>
-                                <state key="normal" title="Take Photo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="takePhoto:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Tma-En-gKs"/>
-                                    <action selector="takePhoto:" destination="SSW-tZ-RaP" eventType="touchUpInside" id="zrf-Kh-Skk"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Camera-50" selectedImage="Camera-50" id="TF5-Zg-b4g"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="imageView" destination="JWw-Hb-Y5L" id="OQ3-bY-1P4"/>
+                        <segue destination="Rwj-kh-JYD" kind="modal" identifier="cameraToForm" modalTransitionStyle="crossDissolve" animates="NO" id="uek-0y-GcB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFF-FG-iVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="424" y="-961"/>
+        </scene>
+        <!--Test Form View Controller-->
+        <scene sceneID="09r-88-ABx">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="Rwj-kh-JYD" customClass="TestFormViewController" customModule="fishYouWereHereFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FfL-ao-z6g"/>
+                        <viewControllerLayoutGuide type="bottom" id="U9o-JR-HG3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j9K-Fc-isg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hbq-26-EVG">
+                                <rect key="frame" x="0.0" y="-35" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.80000007149999997" green="0.99215692280000001" blue="0.20392158630000001" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W0B-Tp-mqb"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MC1-rG-z1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="-961"/>
         </scene>
         <!--Results Table View Controller-->
         <scene sceneID="yTV-iS-D06">
@@ -206,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4J8-Xm-qCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="1079"/>
+            <point key="canvasLocation" x="424" y="1080"/>
         </scene>
     </scenes>
     <resources>
