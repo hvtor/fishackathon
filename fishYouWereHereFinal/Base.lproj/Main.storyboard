@@ -88,9 +88,17 @@
                     <view key="view" contentMode="scaleToFill" id="44f-mw-kpR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dkv-al-JZn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Treasure Map-50" selectedImage="Treasure Map-50" id="Low-Qg-Hxe"/>
+                    <connections>
+                        <outlet property="mapView" destination="Dkv-al-JZn" id="k2X-pT-BUc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuT-zU-1Zk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

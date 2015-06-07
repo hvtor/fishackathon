@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 
+
 class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate {
     
     var coreLocationManager:CLLocationManager!
