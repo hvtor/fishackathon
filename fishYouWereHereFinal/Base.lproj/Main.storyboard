@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kk6-9U-p6G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kk6-9U-p6G">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -211,7 +211,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-YG-QPe">
-                                        <rect key="frame" x="31" y="442" width="258" height="31"/>
+                                        <rect key="frame" x="31" y="427" width="258" height="31"/>
                                         <connections>
                                             <action selector="sliderValueChanged:" destination="Rwj-kh-JYD" eventType="valueChanged" id="KwC-F2-UrY"/>
                                         </connections>
@@ -219,39 +219,40 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eMO-dm-yAu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61p-2g-MyZ">
+                                        <rect key="frame" x="8" y="502" width="304" height="58"/>
+                                        <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Submit Fish Report">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fish Size Estimate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tll-Mc-sPU">
-                                        <rect key="frame" x="0.0" y="356" width="320" height="42"/>
+                                        <rect key="frame" x="0.0" y="342" width="320" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="7co-AB-OZe"/>
-                                            <constraint firstAttribute="height" constant="42" id="mp0-wz-ZhO"/>
+                                            <constraint firstAttribute="height" constant="42" id="dS3-lY-VtQ"/>
+                                            <constraint firstAttribute="width" constant="320" id="lKe-Aj-D9W"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="centerX" secondItem="KVp-Dh-NdG" secondAttribute="centerX" id="0Q4-wR-SiD"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="centerX" secondItem="eMO-dm-yAu" secondAttribute="centerX" id="0WI-c1-2pZ"/>
-                                    <constraint firstItem="ZRx-YG-QPe" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" constant="33" id="40K-0O-WY8"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="top" secondItem="KVp-Dh-NdG" secondAttribute="top" constant="356" id="Bff-0N-cfC"/>
-                                    <constraint firstAttribute="bottom" secondItem="tll-Mc-sPU" secondAttribute="bottom" constant="170" id="JBj-sI-MjX"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" id="Lyt-Cp-TkR"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" id="5IU-wl-Efo"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="centerX" secondItem="KVp-Dh-NdG" secondAttribute="centerX" id="7gF-AQ-JCY"/>
+                                    <constraint firstAttribute="bottom" secondItem="tll-Mc-sPU" secondAttribute="bottom" constant="184" id="Fgl-ZT-I4O"/>
+                                    <constraint firstItem="ZRx-YG-QPe" firstAttribute="top" secondItem="tll-Mc-sPU" secondAttribute="bottom" constant="43" id="Kc7-8p-YDF"/>
                                     <constraint firstItem="eMO-dm-yAu" firstAttribute="top" secondItem="KVp-Dh-NdG" secondAttribute="top" id="RCT-DH-7Kl"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" id="RtT-gi-27Z"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="top" secondItem="KVp-Dh-NdG" secondAttribute="top" constant="356" id="SUT-eE-KOn"/>
-                                    <constraint firstAttribute="trailing" secondItem="tll-Mc-sPU" secondAttribute="trailing" id="V2i-3Q-RAs"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="eMO-dm-yAu" secondAttribute="leading" id="WBG-yC-rnn"/>
-                                    <constraint firstAttribute="trailing" secondItem="tll-Mc-sPU" secondAttribute="trailing" id="ZA6-Ql-R3P"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" id="ZtX-bs-uaj"/>
-                                    <constraint firstAttribute="centerX" secondItem="tll-Mc-sPU" secondAttribute="centerX" id="cOL-RF-1Hn"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="trailing" secondItem="eMO-dm-yAu" secondAttribute="trailing" id="exi-EP-dQN"/>
-                                    <constraint firstAttribute="trailing" secondItem="tll-Mc-sPU" secondAttribute="trailing" id="gLy-j3-mE1"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="centerX" secondItem="ZRx-YG-QPe" secondAttribute="centerX" id="ksI-eP-Bfv"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" id="kun-KM-Yxt"/>
-                                    <constraint firstItem="ZRx-YG-QPe" firstAttribute="top" secondItem="tll-Mc-sPU" secondAttribute="bottom" constant="44" id="oWD-8q-dHG"/>
-                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="top" secondItem="eMO-dm-yAu" secondAttribute="bottom" constant="36" id="uu7-S9-mex"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="eMO-dm-yAu" secondAttribute="leading" id="Vav-R5-nrR"/>
+                                    <constraint firstItem="ZRx-YG-QPe" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" constant="33" id="dOR-w1-Ccy"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="top" secondItem="KVp-Dh-NdG" secondAttribute="top" constant="342" id="fXd-76-uyJ"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="top" secondItem="eMO-dm-yAu" secondAttribute="bottom" constant="22" id="gfw-6X-aJn"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="centerX" secondItem="ZRx-YG-QPe" secondAttribute="centerX" id="hb4-68-M5a"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="trailing" secondItem="eMO-dm-yAu" secondAttribute="trailing" id="mZN-6f-HyD"/>
+                                    <constraint firstAttribute="trailing" secondItem="tll-Mc-sPU" secondAttribute="trailing" id="pFG-wT-2DQ"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
