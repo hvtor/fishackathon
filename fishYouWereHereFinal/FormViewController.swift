@@ -2,7 +2,7 @@
 
 import UIKit
 
-class TestFormViewController: UIViewController{
+class FormViewController: UIViewController{
     
     var weatherRequest:HTTPCommunication!
     var pictureLocationCoords:CLLocationCoordinate2D!
