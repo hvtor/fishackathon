@@ -14,6 +14,7 @@ class FormViewController: UIViewController {
     
     
     @IBOutlet var estimateValueLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,23 +37,25 @@ class FormViewController: UIViewController {
     }
     */
     
-//    func configureDefaultSlider() {
-//        estimateSlider.minimumValue = 1
-//        
-//        estimateSlider.maximumValue = 1000
-//        
-//        estimateSlider.continuous = true
-//        
-//        estimateSlider.addTarget(self, action: "sliderValueDidChange:", forControlEvents: .ValueChanged)
-//    }
-//    
-//    @IBAction func sliderValueChanged(sender: UISlider) {
-//        
-//        var selectedValue = Float(sender.value);
-//        
-//        estimateValueLabel.text = "\(selectedValue)"
-//        
-//    }
+    func configureDefaultSlider() {
+        estimateSlider.minimumValue = 1
+        
+        estimateSlider.maximumValue = 1000
+        
+        estimateSlider.continuous = false
+        estimateSlider.minimumValueImage = UIImage(named: "fish.png")
+        estimateSlider.minimumValueImage = UIImage(named: "fish2.png")
+        estimateSlider.addTarget(self, action: "sliderValueDidChange:", forControlEvents: .ValueChanged)
+    }
+    
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        
+        var selectedValue:Int = Int(sender.value*1000);
+        
+        
+        estimateValueLabel.text = "\(selectedValue)"
+
+    }
 
     
     

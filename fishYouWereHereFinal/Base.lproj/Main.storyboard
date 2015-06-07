@@ -207,10 +207,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVp-Dh-NdG">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVp-Dh-NdG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-YG-QPe">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-YG-QPe">
                                         <rect key="frame" x="31" y="442" width="258" height="31"/>
                                         <connections>
                                             <action selector="sliderValueChanged:" destination="9jd-R6-VM9" eventType="valueChanged" id="e8b-n8-eO8"/>
@@ -219,10 +219,11 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eMO-dm-yAu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Fish Estimate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tll-Mc-sPU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fish Estimate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tll-Mc-sPU">
                                         <rect key="frame" x="0.0" y="356" width="320" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="320" id="7co-AB-OZe"/>
+                                            <constraint firstAttribute="height" constant="42" id="mp0-wz-ZhO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -231,11 +232,35 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="centerX" secondItem="KVp-Dh-NdG" secondAttribute="centerX" id="0Q4-wR-SiD"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="centerX" secondItem="eMO-dm-yAu" secondAttribute="centerX" id="0WI-c1-2pZ"/>
+                                    <constraint firstItem="ZRx-YG-QPe" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" constant="33" id="40K-0O-WY8"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="top" secondItem="KVp-Dh-NdG" secondAttribute="top" constant="356" id="Bff-0N-cfC"/>
+                                    <constraint firstAttribute="bottom" secondItem="tll-Mc-sPU" secondAttribute="bottom" constant="170" id="JBj-sI-MjX"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" id="Lyt-Cp-TkR"/>
+                                    <constraint firstItem="eMO-dm-yAu" firstAttribute="top" secondItem="KVp-Dh-NdG" secondAttribute="top" id="RCT-DH-7Kl"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" id="RtT-gi-27Z"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="top" secondItem="KVp-Dh-NdG" secondAttribute="top" constant="356" id="SUT-eE-KOn"/>
+                                    <constraint firstAttribute="trailing" secondItem="tll-Mc-sPU" secondAttribute="trailing" id="V2i-3Q-RAs"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="eMO-dm-yAu" secondAttribute="leading" id="WBG-yC-rnn"/>
+                                    <constraint firstAttribute="trailing" secondItem="tll-Mc-sPU" secondAttribute="trailing" id="ZA6-Ql-R3P"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" id="ZtX-bs-uaj"/>
                                     <constraint firstAttribute="centerX" secondItem="tll-Mc-sPU" secondAttribute="centerX" id="cOL-RF-1Hn"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="trailing" secondItem="eMO-dm-yAu" secondAttribute="trailing" id="exi-EP-dQN"/>
+                                    <constraint firstAttribute="trailing" secondItem="tll-Mc-sPU" secondAttribute="trailing" id="gLy-j3-mE1"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="centerX" secondItem="ZRx-YG-QPe" secondAttribute="centerX" id="ksI-eP-Bfv"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="leading" secondItem="KVp-Dh-NdG" secondAttribute="leading" id="kun-KM-Yxt"/>
+                                    <constraint firstItem="ZRx-YG-QPe" firstAttribute="top" secondItem="tll-Mc-sPU" secondAttribute="bottom" constant="44" id="oWD-8q-dHG"/>
+                                    <constraint firstItem="tll-Mc-sPU" firstAttribute="top" secondItem="eMO-dm-yAu" secondAttribute="bottom" constant="36" id="uu7-S9-mex"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KVp-Dh-NdG" firstAttribute="leading" secondItem="30b-Bd-V57" secondAttribute="leading" id="AcG-ZU-0Cn"/>
+                            <constraint firstItem="KVp-Dh-NdG" firstAttribute="bottom" secondItem="ozB-ft-jMz" secondAttribute="top" id="FRo-22-hSs"/>
+                            <constraint firstItem="KVp-Dh-NdG" firstAttribute="top" secondItem="30b-Bd-V57" secondAttribute="top" id="Pb7-wh-zrb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="estimateSlider" destination="ZRx-YG-QPe" id="S58-pn-ftc"/>
