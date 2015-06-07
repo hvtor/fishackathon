@@ -212,11 +212,14 @@
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-YG-QPe">
                                         <rect key="frame" x="31" y="442" width="258" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="Rwj-kh-JYD" eventType="valueChanged" id="KwC-F2-UrY"/>
+                                        </connections>
                                     </slider>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eMO-dm-yAu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fish Estimate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tll-Mc-sPU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fish Size Estimate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tll-Mc-sPU">
                                         <rect key="frame" x="0.0" y="356" width="320" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="320" id="7co-AB-OZe"/>
@@ -262,6 +265,7 @@
                     <connections>
                         <outlet property="estimateSlider" destination="ZRx-YG-QPe" id="S58-pn-ftc"/>
                         <outlet property="estimateValueLabel" destination="tll-Mc-sPU" id="J8j-4Z-Slf"/>
+                        <outlet property="imageView" destination="eMO-dm-yAu" id="6Wc-ev-uhm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM9-gp-zkT" userLabel="First Responder" sceneMemberID="firstResponder"/>

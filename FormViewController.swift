@@ -12,6 +12,7 @@ class FormViewController: UIViewController {
 
     @IBOutlet var estimateSlider: UISlider!
     @IBOutlet var estimateValueLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
     
     var weatherRequest:HTTPCommunication!
     var pictureLocationCoords:CLLocationCoordinate2D!
@@ -28,6 +29,8 @@ class FormViewController: UIViewController {
         println(pictureLocationLat)
         println(pictureLocationLng)
         println(capturedImage)
+        
+        imageView.image = capturedImage!
         // Do any additional setup after loading the view.
     }
 
