@@ -13,10 +13,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     private let reuseIdentifier = "Cell"
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     var fishCollection = [Dictionary<String,String>]()
-
-//    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var label: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +31,17 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CollectionViewCell
         
-        let fishPlistData = fishCollection[ indexPath.row ]
+        let fishPlistData = self.fishCollection[indexPath.row] 
         
-        println( "fishPlistData \(fishPlistData)")
-
+        println("fishPlistData \(fishPlistData)")
+//        println( fishPlistData["Image"] )
         
+        cell.imageView.image = UIImage(named: fishPlistData["ImageName"]! )
+        
+        cell.commonNameLabel.text = fishPlistData["CommonName"]
         return cell
-        
     }
     
     
@@ -51,9 +49,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         
         return 1
     }
-    
-   
-
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -67,14 +63,14 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             plistArray = NSArray(contentsOfFile: path)!
         }
         
-        println( plistArray )
+//        println( plistArray )
         
         if let array = plistArray {
             
             for fish in array{
                 let fishData = fish as? NSDictionary
                 self.fishCollection.append( fishData! as! Dictionary<String, String> )
-                println( fishData )
+//                println( fishData )
             }
         }
         
@@ -129,8 +125,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 //        }
 //        
 //    }
-    
-
 
 }
 
