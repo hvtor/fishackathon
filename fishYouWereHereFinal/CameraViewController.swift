@@ -14,6 +14,9 @@ class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavig
     var coreLocationManager:CLLocationManager!
     var imagePicker: UIImagePickerController!
     
+    let request = HTTPCommunication()
+//    var 
+    
 
     var pictureLocationCoords:CLLocationCoordinate2D!
     var pictureLocationLat:Double!
@@ -58,18 +61,13 @@ class CameraViewController: UIViewController, UITabBarControllerDelegate,UINavig
         pictureLocationLat = coreLocationManager.location.coordinate.latitude
         pictureLocationLng = coreLocationManager.location.coordinate.longitude
         
-//        println("locationManager location: \(pictureLocationCoords)")
-//        println("locationManager lat: \(pictureLocationLat)")
-//        println("locationManager lng: \(pictureLocationLng)")
+        self.request.getWeatherData( pictureLocationLat, lng: pictureLocationLng) // sets up current temp within initialized request variable to be passed forward
         
-        let request = HTTPCommunication()
-        request.getWeatherData(43.7, lng:79.4)
-
-
+       
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
-//        println("locations = \(locations)")
+        //        println("locations = \(locations)")
     }
     
     func setupLocationManager(){

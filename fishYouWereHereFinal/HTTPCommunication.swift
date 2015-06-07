@@ -12,11 +12,14 @@ class HTTPCommunication: NSObject, NSURLConnectionDelegate {
     
     lazy var data = NSMutableData()
     
+    var currentTemp:Double!
+    var currentConditions:String!
+    
     func getWeatherData(lat:Double, lng:Double){
         let latString = lat.description
         let lngString = lng.description
         
-        var urlString = "http://api.openweathermap.org/data/2.5/weather?lat="
+        var urlString = "http://api.openweathermap.org/data/2.5/weather?units=imperial&lat="
         urlString += latString
         urlString += "&lon="
         urlString += lngString
@@ -27,23 +30,26 @@ class HTTPCommunication: NSObject, NSURLConnectionDelegate {
         var request: NSURLRequest = NSURLRequest(URL: url)
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)!
         connection.start()
-
+        
     }
     
     func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
         self.data.appendData(data)
+        
     }
         
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         var err: NSError
         // throwing an error on the line below (can't figure out where the error message is)
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-        println(jsonResult)
+        
+        let jsonWeatherArray = jsonResult["weather"] as! NSArray
+        let jsonMainResults = jsonResult["main"] as! NSDictionary
+        let jsonWeather = jsonWeatherArray[0] as! NSDictionary
+        
+        self.currentConditions = jsonWeather["description"] as! String
+        self.currentTemp = jsonMainResults["temp"] as! Double
+
+
     }
-    
-    
-    
-    
-    
-    
 }
