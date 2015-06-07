@@ -84,7 +84,7 @@ class CameraViewController: UIImagePickerController, UITabBarControllerDelegate,
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "cameraToForm") {
             
-            var formVC = (segue.destinationViewController as! TestFormViewController)
+            var formVC = (segue.destinationViewController as! FormViewController)
             formVC.weatherRequest = self.request
             formVC.pictureLocationCoords = self.pictureLocationCoords
             formVC.pictureLocationLat = self.pictureLocationLat
