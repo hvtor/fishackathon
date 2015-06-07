@@ -11,13 +11,23 @@ import UIKit
 class FormViewController: UIViewController {
 
     @IBOutlet var estimateSlider: UISlider!
-    
-    
     @IBOutlet var estimateValueLabel: UILabel!
+    
+    var weatherRequest:HTTPCommunication!
+    var pictureLocationCoords:CLLocationCoordinate2D!
+    var pictureLocationLat:Double!
+    var pictureLocationLng:Double!
+    var capturedImage:UIImage!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        println(weatherRequest)
+        println(pictureLocationCoords)
+        println(pictureLocationLat)
+        println(pictureLocationLng)
+        println(capturedImage)
         // Do any additional setup after loading the view.
     }
 
