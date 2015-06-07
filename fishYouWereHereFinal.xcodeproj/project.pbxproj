@@ -12,6 +12,7 @@
 		638A744F1B236F3C00157C64 /* HTTPCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A744E1B236F3C00157C64 /* HTTPCommunication.swift */; };
 		63B1C1861B236230004459DB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1C1851B236230004459DB /* CameraViewController.swift */; };
 		63B1C1881B23629C004459DB /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1C1871B23629C004459DB /* ResultsTableViewController.swift */; };
+		63C078DE1B243D3400587AF9 /* Moofushi_Kandu_fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63C078DD1B243D3400587AF9 /* Moofushi_Kandu_fish.jpg */; };
 		63DAD7041B2278A700EDC230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DAD7031B2278A700EDC230 /* AppDelegate.swift */; };
 		63DAD7061B2278A700EDC230 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DAD7051B2278A700EDC230 /* FirstViewController.swift */; };
 		63DAD7081B2278A700EDC230 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DAD7071B2278A700EDC230 /* CollectionViewController.swift */; };
@@ -76,6 +77,7 @@
 		638A744E1B236F3C00157C64 /* HTTPCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPCommunication.swift; sourceTree = "<group>"; };
 		63B1C1851B236230004459DB /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		63B1C1871B23629C004459DB /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		63C078DD1B243D3400587AF9 /* Moofushi_Kandu_fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Moofushi_Kandu_fish.jpg; sourceTree = "<group>"; };
 		63DAD6FE1B2278A700EDC230 /* fishYouWereHereFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fishYouWereHereFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DAD7021B2278A700EDC230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63DAD7031B2278A700EDC230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				E90433501B2414130088B8A1 /* fish.png */,
 				63DAD7261B227F2F00EDC230 /* fish2.png */,
 				E930BDAD1B22E289009B9EE0 /* Swift.png */,
+				63C078DD1B243D3400587AF9 /* Moofushi_Kandu_fish.jpg */,
 				E95420671B23128400F265D4 /* Frameworks */,
 				63DAD7011B2278A700EDC230 /* Supporting Files */,
 			);
@@ -352,6 +355,7 @@
 				63DAD7271B227F2F00EDC230 /* firstViewControllerScreenShot.png in Resources */,
 				E90433511B2414130088B8A1 /* fish.png in Resources */,
 				E930BDAA1B22D44D009B9EE0 /* fishackathon2015.plist in Resources */,
+				63C078DE1B243D3400587AF9 /* Moofushi_Kandu_fish.jpg in Resources */,
 				E930BDAE1B22E289009B9EE0 /* Swift.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
